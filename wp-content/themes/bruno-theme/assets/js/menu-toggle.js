@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
       menu.classList.toggle('show');
       const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
       menuToggle.setAttribute('aria-expanded', !expanded);
+      console.log("ça marche");
     });
   }
 });

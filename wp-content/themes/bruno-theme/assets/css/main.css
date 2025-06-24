@@ -66,6 +66,27 @@ body {
   position: relative;
 }
 
+.site-nav .menu {
+  display: flex ;
+  flex-direction: row ;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-nav .menu li {
+  display: inline-block !important;
+  margin-right: 30px;
+}
+
+.site-nav .menu li:last-child {
+  margin-right: 0;
+}
+
+.site-nav .menu li a {
+  display: inline-block;
+}
+
 .menu-toggle {
   font-size: 24px;
   background: none;
@@ -80,6 +101,7 @@ body {
 .menu {
   list-style: none;
   display: flex;
+  flex-direction: row;
   gap: 25px;
   align-items: center;
 }
@@ -123,7 +145,8 @@ body {
   color: #00d9ff;
   text-decoration: underline;
   font-weight: 700;
-  border-bottom: 2px solid #00d9ff;
+  border-bottom: 1px solid #00d9ff;
+   text-decoration: none;
 }
 
 /* Accueil sidebar et photo */
@@ -274,7 +297,7 @@ body {
 
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .site-identity {
     display: none;
   }
@@ -283,6 +306,16 @@ body {
     flex-wrap: nowrap; /* empêche le passage à la ligne */
     justify-content: space-between; /* garde l’espace entre logo et menu */
     align-items: center; /* bien aligner verticalement */
+  }
+
+   .site-branding {
+    flex: 1;
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    flex: none;
+    position: relative;
   }
 }
 
@@ -303,23 +336,38 @@ body {
   }
 
   .menu {
-    display: none;
+    display: none !important;
     flex-direction: column;
     background: #0074bc;
+    padding: 15px;
     position: absolute;
-    right: 0;
     top: 100%;
-    width: 200px;
-    border-radius: 4px;
+    right: 15px;
+    left: 15px;
+    border-radius: 8px;
     z-index: 999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
 
   .menu li {
     padding: 10px 15px;
   }
 
-  .menu.show {
+.menu.menu-open {
     display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .menu.show {
+    display: flex !important;
   }
 }
 

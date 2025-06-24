@@ -36,11 +36,11 @@ function bruno_theme_enqueue_scripts() {
     // Style custom global éventuel
     wp_enqueue_style('bruno-custom', get_template_directory_uri() . '/assets/css/custom.css', [], '1.0');
 
-    // Script principal JS (si utilisé)
-    wp_enqueue_script('bruno-main', get_template_directory_uri() . '/assets/js/main.js', [], '1.0', true);
-
-     // script JS menu burger
+      // script JS menu burger
     wp_enqueue_script('bruno-menu-toggle', get_template_directory_uri() . '/assets/js/menu-toggle.js', array(), '1.0', true);
+
+    // Script principal JS 
+    wp_enqueue_script('bruno-main', get_template_directory_uri() . '/assets/js/main.js', [], '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'bruno_theme_enqueue_scripts');
 

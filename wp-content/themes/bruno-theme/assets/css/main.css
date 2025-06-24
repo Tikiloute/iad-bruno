@@ -1,0 +1,354 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corps */
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  background-color: #fff;
+  color: #2c2c2c;
+  line-height: 1.5;
+}
+
+/* Conteneur */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.bordered {
+  max-width: 960px;
+  width: 100%;
+  padding: 20px;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@media (max-width: 964px) {
+  .bordered {
+    border-left: none;
+    border-right: none;
+    padding: 15px;
+  }
+}
+
+
+/* Header */
+.site-header {
+  background-color: #0074bc;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-logo img {
+  height: 50px;
+}
+
+/* Navigation */
+.site-nav {
+  position: relative;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+  margin-left: auto; /* pousse le bouton à droite */
+}
+
+/* Menu */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover,
+.menu li a:focus {
+  color: #00d9ff;
+}
+
+.site-branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centre horizontalement tous les enfants */
+  flex-shrink: 1; /* permet de réduire si besoin */
+  min-width: 0; /* évite débordement */
+}
+
+.site-identity {
+  margin-top: 3px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+.menu li.current-menu-item > a,
+.menu li.current_page_item > a,
+.menu li.current_page_ancestor > a {
+  color: #00d9ff;
+  text-decoration: underline;
+  font-weight: 700;
+  border-bottom: 2px solid #00d9ff;
+}
+
+/* Accueil sidebar et photo */
+.hero {
+  background-color: #F5F5F5;
+  padding: 40px 20px;
+  text-align: center;
+}
+.hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  object-fit: cover;
+  border: 4px solid #0072CE;
+  box-shadow: 10px 5px 5px rgb(13, 0, 68) !important;
+}
+
+.hero h1 {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #0072CE;
+  margin-bottom: 0.4em;
+}
+.hero p {
+  color: #666;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.homepage-content.content-wrapper.bordered {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 20px;
+  border-left: 1px solid #E5E5E5;
+  border-right: 1px solid #E5E5E5;
+  box-sizing: border-box;
+   overflow: hidden;
+}
+
+.homepage-content .elementor-section {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Cible les images dans Elementor */
+.elementor img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ce sélecteur cible le conteneur des sections (photo + Elementor) */
+.homepage-content.content-wrapper.bordered {
+  display: flex;
+  flex-direction:row; /* Force empilement vertical */
+  gap: 40px; /* Espace entre les blocs */
+}
+
+/* sidebar de l'accueil partie tél et mail*/
+.hero-contact {
+  margin-top: 30px; /* ↑ valeur augmentée pour plus d'espacement */
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.contact-link {
+  display: inline-block;
+  color: #005288; /* Bleu IAD renforcé */
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 8px;
+  white-space: nowrap; /* évite les retours à la ligne */
+}
+
+.contact-link strong {
+  font-weight: 700;
+}
+
+.contact-link:hover {
+  color: #003d66;
+  text-decoration: underline;
+}
+
+/* Responsive sidebar accueil */
+@media screen and (max-width: 964px) {
+  .homepage-content.content-wrapper.bordered {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px; 
+    border-left: none;
+    border-right: none;
+  }
+
+  .hero, .hero-inner {
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-photo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    object-fit:scale-down;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero .elementor-widget-heading h1 {
+    margin-bottom: 1em !important;
+    }
+
+    .hero .elementor-widget-text-editor p {
+    margin-top: 1em !important;
+    }
+
+   .homepage-content p:first-of-type {
+    margin-top: 0 !important;
+  }
+
+   .elementor-section {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
+/* Masquer sur mobile */
+@media (max-width: 964px) {
+
+  .site-branding {
+    align-items: flex-start;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .site-identity {
+    display: none;
+  }
+
+   .site-header {
+    flex-wrap: nowrap; /* empêche le passage à la ligne */
+    justify-content: space-between; /* garde l’espace entre logo et menu */
+    align-items: center; /* bien aligner verticalement */
+  }
+}
+
+
+/* Footer */
+.site-footer {
+  background-color: #f5f5f5;
+  color: #2c2c2c;
+  text-align: center;
+  padding: 20px 15px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 964px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #0074bc;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 200px;
+    border-radius: 4px;
+    z-index: 999;
+  }
+
+  .menu li {
+    padding: 10px 15px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: #f5f5f5;
+  color: #2c2c2c;
+  padding: 20px 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: #0074bc;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  color: #00d9ff;
+  text-decoration: underline;
+}
+
+@media (max-width: 964px) {
+  .site-footer p {
+    margin-bottom: 10px;
+  }
+}
+

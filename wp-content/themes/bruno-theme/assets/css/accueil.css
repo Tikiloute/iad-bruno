@@ -6,9 +6,9 @@
   padding: 30px 25px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  max-width: 280px;   /* ✅ largeur max raisonnable */
-  margin: 0 auto;  
   width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .hero-card img.hero-photo {
@@ -70,4 +70,34 @@
 .hero-card .contact-text:hover {
   color: #003d66;
   text-decoration: underline;
+}
+
+.hero-contact .social-row {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3); /* liseret sobre sur fond bleu */
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0072CE;
+  margin-right: 10px;
+  margin-top: 25px;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+  background-color: #005ba1;
+  transform: scale(1.1);
 }

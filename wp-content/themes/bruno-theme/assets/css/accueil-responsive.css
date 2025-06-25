@@ -1,21 +1,21 @@
 @media screen and (max-width: 768px) {
   .hero-card {
-    padding: 20px;
+    max-width: 95vw !important;     /* prend presque toute la largeur visible */
+    padding: 25px 20px;
+    margin: 0 auto;
   }
 
-  .service-card {
-    padding: 20px;
-    margin-bottom: 30px;
+  .hero-card img.hero-photo {
+    width: 140px;
+    height: 140px;
   }
 
-  .icon-circle {
-    width: 50px;
-    height: 50px;
-    font-size: 22px;
+  .hero-card h2 {
+    font-size: 20px;
   }
 
-  .hero-photo {
-    width: 160px;
-    height: 160px;
+  .hero-card p {
+    font-size: 14px;
   }
 }
+

@@ -15,14 +15,26 @@ get_header();
         <h2>Bruno Etcheverry</h2>
         <p>Conseiller immobilier<br>indépendant, affilié IAD France</p>
         <div class="hero-contact">
-        <div class="contact-row">
-            <span class="contact-icon">📞</span>
-            <span class="contact-text">07 87 03 08 55</span>
-        </div>
-        <div class="contact-row">
-            <span class="contact-icon">✉️</span>
-            <a href="mailto:bruno.etcheverry@iadfrance.fr" class="contact-text">bruno.etcheverry@iadfrance.fr</a>
-        </div>
+            <div class="contact-row">
+                <i class="fas fa-phone contact-icon"></i>
+                <span class="contact-text">07 87 03 08 55</span>
+            </div>
+            <div class="contact-row">
+                <i class="fas fa-envelope contact-icon"></i>
+                <a href="mailto:bruno.etcheverry@iadfrance.fr" class="contact-text">bruno.etcheverry@iadfrance.fr</a>
+            </div>
+            
+            <div class="social-row">
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
         </div>
     </div>
 

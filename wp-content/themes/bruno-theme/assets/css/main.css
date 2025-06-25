@@ -7,10 +7,19 @@
 
 /* Corps */
 body {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
   background-color: #fff;
   color: #2c2c2c;
   line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+body:not(.elementor-page) {
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 /* Conteneur */
@@ -120,7 +129,7 @@ body {
 
 .menu li a:hover,
 .menu li a:focus {
-  color: #00d9ff;
+  color: #c9e4ff;
 }
 
 .site-branding {
@@ -142,10 +151,10 @@ body {
 .menu li.current-menu-item > a,
 .menu li.current_page_item > a,
 .menu li.current_page_ancestor > a {
-  color: #00d9ff;
+  color: #c9e4ff;
   text-decoration: underline;
   font-weight: 700;
-  border-bottom: 1px solid #00d9ff;
+  border-bottom: 1px solid #c9e4ff;
    text-decoration: none;
 }
 
@@ -307,39 +316,83 @@ body {
 
   .menu {
     display: none !important;
-    flex-direction: column;
-    background: #0074bc;
+    flex-direction: column !important;
+    background-color: #003d66;
     padding: 15px;
     position: absolute;
+    right: 0;
     top: 100%;
-    right: 15px;
-    left: 15px;
+    width: 290px !important;
+    gap: 0;
     border-radius: 8px;
     z-index: 999;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .site-nav .menu {
+    width: 220px;
+    right: 0;
+    left: auto;
+    padding: 0;
+    background-color: #003d66;
+    flex-direction: column;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .site-nav .menu li {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+  }
+
+  .site-nav .menu li a {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-size: 26px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    box-sizing: border-box;
+    border-bottom: none;
+    /* white-space: normal; /* ✅ permet retour à la ligne naturelle */
+    /* word-break: break-word; ✅ évite débordement */ 
   }
 
   .menu li {
     padding: 10px 15px;
   }
 
-.menu.menu-open {
+  .menu li a {
+    font-size: 18px;
+    color: white;
+    width: 100%;
+    left: auto;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .menu.menu-open {
     display: flex;
   }
 
   .menu-toggle {
     display: block;
-    background: none;
+    /* background: none; */
     border: none;
     font-size: 28px;
     color: white;
     cursor: pointer;
   }
-  
+
   .menu.show {
     display: flex !important;
   }
 }
+
+
 
 /* FOOTER */
 .site-footer {
@@ -360,7 +413,7 @@ body {
 
 .site-footer a:hover,
 .site-footer a:focus {
-  color: #00d9ff;
+  color: #c9e4ff;
   text-decoration: underline;
 }
 

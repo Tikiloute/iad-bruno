@@ -1,0 +1,73 @@
+/* ====== HERO CARD AGENT ====== */
+.hero-card {
+  background: #c9e4ff;
+  color: #1a1a1a;
+  text-align: center;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  max-width: 280px;   /* ✅ largeur max raisonnable */
+  margin: 0 auto;  
+  width: 100%;
+}
+
+.hero-card img.hero-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin: 0 auto 20px auto;
+  display: block;
+}
+
+.hero-card h2 {
+  font-size: 22px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #0072CE;
+}
+
+.hero-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  margin: 0.4em 0;
+}
+
+/* ====== CONTACT SECTION DANS LA CARD ====== */
+.hero-card .hero-contact {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.hero-card .contact-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.hero-card .contact-icon {
+  font-size: 18px;
+  color: #0072CE;
+}
+
+.hero-card .contact-text {
+  color: #005288;
+  font-weight: 600;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.hero-card .contact-text:hover {
+  color: #003d66;
+  text-decoration: underline;
+}

@@ -33,7 +33,7 @@ function bruno_theme_enqueue_scripts() {
         wp_enqueue_style('formulaire-responsive', get_template_directory_uri() . '/assets/css/formulaire-responsive.css');
     }
 
-    if (is_page('articles')) {
+    if (is_page('articles') || is_page('annonces') || is_page(17)) {
         wp_enqueue_style('articles', get_template_directory_uri() . '/assets/css/articles.css');
     }
 

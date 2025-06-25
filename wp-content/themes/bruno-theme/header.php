@@ -14,6 +14,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <header class="site-header sticky-header">
 
   <div class="site-branding">

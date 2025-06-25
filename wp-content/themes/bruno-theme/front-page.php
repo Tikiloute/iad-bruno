@@ -11,7 +11,7 @@ get_header();
 <div class="homepage-content content-wrapper bordered">
 
     <div class="hero-card">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/face.jpg" alt="Bruno Etcheverry" class="hero-photo" />
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/moi-iad.jpg" alt="Bruno Etcheverry" class="hero-photo" />
         <h2>Bruno Etcheverry</h2>
         <p>Conseiller immobilier<br>indépendant, affilié IAD France</p>
         <div class="hero-contact">
@@ -24,17 +24,14 @@ get_header();
                 <a href="mailto:bruno.etcheverry@iadfrance.fr" class="contact-text">bruno.etcheverry@iadfrance.fr</a>
             </div>
             
-            <div class="social-row">
-                <a href="#" class="social-icon" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="#" class="social-icon" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="social-icon" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
+            <div class="social-block">
+                <div class="social-row left">
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
             </div>
+
         </div>
     </div>
 

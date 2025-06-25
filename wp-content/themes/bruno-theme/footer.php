@@ -11,6 +11,7 @@
       <a href="<?php echo home_url('/politique-de-confidentialite'); ?>">Confidentialité</a>
     </p>
   </div>
+
   <?php wp_footer(); ?>
 </footer>
 

@@ -33,6 +33,10 @@ function bruno_theme_enqueue_scripts() {
         wp_enqueue_style('formulaire-responsive', get_template_directory_uri() . '/assets/css/formulaire-responsive.css');
     }
 
+    if (is_page('articles')) {
+        wp_enqueue_style('articles', get_template_directory_uri() . '/assets/css/articles.css');
+    }
+
     // Style custom global éventuel
     wp_enqueue_style('bruno-custom', get_template_directory_uri() . '/assets/css/custom.css', [], '1.0');
 
@@ -67,3 +71,6 @@ add_action('after_setup_theme', 'bruno_theme_setup');
 function bruno_theme_image_path($path = '') {
     return get_template_directory_uri() . '/assets/img/' . $path;
 }
+
+add_image_size('card-thumbnail', 19820, 1080, true);
+

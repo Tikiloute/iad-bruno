@@ -1,0 +1,141 @@
+/* WRAPPER UNIFORME */
+.bordered .elementor-section.elementor-section-boxed > .elementor-container {
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.bordered .elementor-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Forcer Elementor à occuper toute la largeur du bloc .bordered */
+.bordered .elementor-section.elementor-section-boxed,
+.bordered .elementor-container,
+.bordered .elementor-column {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Supprime les marges internes éventuelles */
+.bordered .elementor-widget-wrap {
+  padding: 0 !important;
+}
+
+.homepage-content.content-wrapper.bordered {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 20px;
+  border-left: 1px solid #E5E5E5;
+  border-right: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@media (max-width: 964px) {
+  .homepage-content.content-wrapper.bordered {
+    border-left: none;
+    border-right: none;
+    padding: 20px;
+  }
+}
+
+/* HEADER DE LA PAGE SINGLE */
+.single-header {
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto 40px auto;
+  padding: 0 15px;
+}
+
+/* Image dans le bloc de titre */
+.single-card-thumb {
+  width: 100%;
+  max-height: 400px;        /* ✅ limite la hauteur */
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.single-card-thumb img {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;        /* ✅ limite aussi l’image */
+  object-fit: cover;        /* ✅ recadre joliment */
+  display: block;
+  border-radius: 12px;
+}
+
+.single-page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #003d66;
+  margin-bottom: 10px;
+}
+
+.single-page-excerpt {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+/* CONTENU */
+.single-post-wrapper {
+  padding: 0;
+  background: white;
+}
+
+.single-post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto 20px auto;
+  padding: 0 15px;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.single-post-meta .post-categories {
+  background: #f0f4f8;
+  color: #0074bc;
+  padding: 6px 12px;
+  border-radius: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.single-post-meta .post-categories i {
+  color: #0074bc;
+}
+
+.single-post-meta time {
+  color: #777;
+  font-style: italic;
+}
+
+.single-post-meta i {
+  color: #0074bc;
+  margin-right: 6px;
+}
+
+.single-post-content {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2c2c2c;
+}

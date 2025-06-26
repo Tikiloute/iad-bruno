@@ -29,10 +29,36 @@
 
                     <h2 class="article-card-title"><?php the_title(); ?></h2>
 
-                    <time class="article-card-date" datetime="<?php echo get_the_date('c'); ?>">
-                        <?php echo get_the_date('d M Y'); ?>
-                    </time>
+                    <?php
+                    $categories = get_the_category();
+                    $valid_cats = [];
 
+                    $icon_map = [
+                        'Exclusivité'     => ['icon' => 'fa-star',           'class' => 'badge-exclu'],
+                        'Nouveauté'       => ['icon' => 'fa-bolt',           'class' => 'badge-new'],
+                        'Sous compromis'  => ['icon' => 'fa-hourglass-half', 'class' => 'badge-compromis'],
+                        'Vendu'           => ['icon' => 'fa-ban',            'class' => 'badge-vendu']
+                    ];
+
+                    if (!empty($categories)) {
+                        foreach ($categories as $cat) {
+                            if ($cat->name !== 'Non classé') {
+                                $data = $icon_map[$cat->name] ?? ['icon' => 'fa-tag', 'class' => 'badge-default'];
+                                $valid_cats[] = '<span class="article-badge ' . esc_attr($data['class']) . '">
+                                    <i class="fas ' . esc_attr($data['icon']) . '"></i> ' . esc_html($cat->name) . '
+                                </span>';
+                            }
+                        }
+                    }
+
+                    if (!empty($valid_cats)) :
+                    ?>
+                    <div class="article-card-meta">
+                        <?php echo implode(' ', $valid_cats); ?>
+                    </div>
+                    <?php endif; ?>
+
+                    
                     <ul class="annonce-infos">
                         <?php if ($prix = get_field('prix')) : ?>
                             <li><span class="champ-label"><i class="fas fa-euro-sign icon-field"></i> Prix</span> <span class="champ-valeur"><?= number_format($prix, 0, ',', ' ') ?> €</span></li>
@@ -50,9 +76,6 @@
                             <li><span class="champ-label"><i class="fas fa-home icon-field"></i> Type</span> <span class="champ-valeur"><?= esc_html($type) ?></span></li>
                         <?php endif; ?>
 
-                        <?php if ($dpe = get_field('dpe')) : ?>
-                            <li><span class="champ-label"><i class="fas fa-leaf icon-field"></i> DPE</span> <span class="champ-valeur"><?= esc_html($dpe) ?></span></li>
-                        <?php endif; ?>
                     </ul>
 
                     <?php if (has_excerpt()) : ?>
@@ -61,7 +84,11 @@
                         </p>
                     <?php endif; ?>
 
-                   <span class="read-more-arrow animated">→</span>
+                    <?php 
+                        if(!empty($lien)){
+                            echo '<span class="read-more-arrow animated">→</span>';
+                        }
+                   ?>
 
                 </div>
             </article>

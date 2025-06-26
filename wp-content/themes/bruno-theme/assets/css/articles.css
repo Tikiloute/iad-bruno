@@ -1,3 +1,9 @@
+.bordered .elementor-section.elementor-section-boxed > .elementor-container {
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 .article-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -65,6 +71,33 @@
   flex-grow: 1;
 }
 
+.article-card-footer {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.article-read-more {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #0074bc;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.article-read-more i {
+  margin-left: 8px;
+}
+
+.article-read-more:hover {
+  background-color: #C9E4FF;
+  color: #0074bc;
+  transform: translateX(3px);
+}
+
 
 .article-header {
   text-align: center;
@@ -81,6 +114,76 @@
   margin-bottom: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
+
+.article-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 6px;
+  margin-right: 6px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.single-post-meta .article-badge i {
+  color: white;
+}
+
+.badge-exclu {
+  background-color: #0072CE; /* bleu IAD */
+}
+
+.badge-new {
+  background-color: #28a745; /* vert nouveauté */
+}
+
+.badge-compromis {
+  background-color: #fd7e14; /* orange sous compromis */
+}
+
+.badge-vendu {
+  background-color: #dc3545; /* rouge vendu */
+}
+
+.badge-default {
+  background-color: #6c757d; /* gris pour autres */
+}
+
+.article-badge i {
+  margin-right: 5px;
+}
+
+/* Badges thématiques */
+.badge-patrimoine {
+  background-color: #6f42c1; /* violet */
+}
+
+.badge-sport {
+  background-color: #28a745; /* vert */
+}
+
+.badge-evenement {
+  background-color: #fd7e14; /* orange */
+}
+
+.badge-culture {
+  background-color: #e83e8c; /* rose */
+}
+
+.badge-politique {
+  background-color: #343a40; /* gris foncé */
+}
+
+.badge-economie {
+  background-color: #17a2b8; /* bleu clair */
+}
+
+.badge-divers,
+.badge-default {
+  background-color: #6c757d; /* gris */
+}
+
 
 @media screen and (max-width: 768px) {
   .article-page-thumbnail {
@@ -173,6 +276,8 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
+
+/* ANNONCES */
 .annonce-infos {
   list-style: none;
   margin: 15px 0;

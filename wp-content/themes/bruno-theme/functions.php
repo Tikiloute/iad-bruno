@@ -21,6 +21,7 @@ function bruno_theme_enqueue_scripts() {
     if (is_singular('post')) {
         wp_enqueue_style('post', get_template_directory_uri() . '/assets/css/post.css');
         wp_enqueue_style('post-responsive', get_template_directory_uri() . '/assets/css/post-responsive.css');
+        wp_enqueue_style('articles', get_template_directory_uri() . '/assets/css/articles.css'); 
     }
 
     if (is_page('mes-annonces')) {
@@ -31,11 +32,14 @@ function bruno_theme_enqueue_scripts() {
     if (is_page('contact')) {
         wp_enqueue_style('formulaire', get_template_directory_uri() . '/assets/css/formulaire.css');
         wp_enqueue_style('formulaire-responsive', get_template_directory_uri() . '/assets/css/formulaire-responsive.css');
+        wp_enqueue_style('articles', get_template_directory_uri() . '/assets/css/articles.css');
     }
 
     if (is_page('articles') || is_page('annonces') || is_page(17)) {
         wp_enqueue_style('articles', get_template_directory_uri() . '/assets/css/articles.css');
     }
+
+    
 
     // Style custom global éventuel
     wp_enqueue_style('bruno-custom', get_template_directory_uri() . '/assets/css/custom.css', [], '1.0');

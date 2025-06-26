@@ -1,0 +1,106 @@
+/* Conteneur général du formulaire centré */
+.forminator-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 30px 15px;
+  background: none !important;
+}
+
+/* Conteneur du formulaire */
+.homepage-content.content-wrapper.bordered form.forminator-custom-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Champs */
+.homepage-content.content-wrapper.bordered .forminator-field input,
+.homepage-content.content-wrapper.bordered .forminator-field textarea,
+.homepage-content.content-wrapper.bordered .forminator-field select {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+/* Label */
+.homepage-content.content-wrapper.bordered .forminator-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #003d66;
+}
+
+/* Bouton */
+.homepage-content.content-wrapper.bordered .forminator-button-submit {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #0074bc;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 15px !important;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.homepage-content.content-wrapper.bordered .forminator-button-submit:hover {
+  background-color: #C9E4FF;
+  color: #0074bc;
+  transform: translateX(3px);
+}
+
+.homepage-content.content-wrapper.bordered form.forminator-custom-form {
+  max-width: 960px; /* ← au lieu de 800px */
+  min-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 950px) {
+  .homepage-content.content-wrapper.bordered form.forminator-custom-form {
+    max-width: 100%;
+    min-width: auto;
+    padding: 0 15px;
+  }
+
+  .forminator-field input,
+  .forminator-field textarea,
+  .forminator-field select {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding: 14px 16px;
+  }
+
+  .forminator-button {
+    width: 100%;
+  }
+}
+
+.forminator-response-message {
+  padding: 16px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.forminator-response-message.success {
+  background-color: #e6f4ea;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.forminator-response-message.error {
+  background-color: #fdecea;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+

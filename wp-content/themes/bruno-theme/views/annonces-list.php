@@ -1,5 +1,6 @@
 <?php if (!empty($annonces)) : ?>
     <div class="article-grid">
+
         <?php foreach ($annonces as $annonce) : ?>
             <?php setup_postdata($GLOBALS['post'] =& $annonce); ?>
 
@@ -58,7 +59,7 @@
                     </div>
                     <?php endif; ?>
 
-                    
+
                     <ul class="annonce-infos">
                         <?php if ($prix = get_field('prix')) : ?>
                             <li><span class="champ-label"><i class="fas fa-euro-sign icon-field"></i> Prix</span> <span class="champ-valeur"><?= number_format($prix, 0, ',', ' ') ?> €</span></li>

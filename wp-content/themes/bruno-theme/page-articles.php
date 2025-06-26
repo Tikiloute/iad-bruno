@@ -4,8 +4,8 @@
 // Empêche l'accès direct
 if (!defined('ABSPATH')) exit;
 
-// Exécuter ce template uniquement si la page a l'ID 13
-if (!is_page(13)) {
+// Exécuter ce template uniquement si la page a l'ID PAGE_ID_ARTICLES
+if (!is_page(PAGE_ID_ARTICLES)) {
     get_template_part('index');
     exit;
 }

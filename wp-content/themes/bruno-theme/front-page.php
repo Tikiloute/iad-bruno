@@ -7,6 +7,7 @@ if (!defined('ABSPATH')) {
 // Inclut le header
 get_header();
 ?>
+<h1 class="visually-hidden">Conseiller immobilier à Périgueux - Bruno Etcheverry</h1>
 
 <div class="homepage-content content-wrapper bordered">
 

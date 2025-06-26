@@ -4,6 +4,8 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+require_once get_template_directory() . '/constants.php';
+
 // 1. Charger les styles et scripts
 function bruno_theme_enqueue_scripts() {
     // Style principal WordPress (style.css)
@@ -39,6 +41,7 @@ function bruno_theme_enqueue_scripts() {
 
     if (is_page('articles') || is_page('annonces') || is_page(17)) {
         wp_enqueue_style('articles', get_template_directory_uri() . '/assets/css/articles.css');
+                wp_enqueue_style('annonce', get_template_directory_uri() . '/assets/css/annonce.css');
     }
 
     

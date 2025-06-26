@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+  .single-card-thumb {
+    display: block;
+    background: linear-gradient(135deg, #C9E4FF, #EAF6FF);
+    height: 180px;
+    border-radius: 12px;
+  }
+
+  .single-card-thumb img {
+    display: none;
+  }
+
+  .single-page-title {
+    margin-bottom: 0 !important;
+  }
+}

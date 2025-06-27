@@ -38,7 +38,8 @@
                         'Exclusivité'     => ['icon' => 'fa-star',           'class' => 'badge-exclu'],
                         'Nouveauté'       => ['icon' => 'fa-bolt',           'class' => 'badge-new'],
                         'Sous compromis'  => ['icon' => 'fa-hourglass-half', 'class' => 'badge-compromis'],
-                        'Vendu'           => ['icon' => 'fa-ban',            'class' => 'badge-vendu']
+                        'Vendu'           => ['icon' => 'fa-ban',            'class' => 'badge-vendu'],
+                        'Coup de cœur'    => ['icon' => 'fa-heart',          'class' => 'badge-coupdecoeur']
                     ];
 
                     if (!empty($categories)) {

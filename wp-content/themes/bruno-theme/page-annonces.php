@@ -1,5 +1,5 @@
 <?php
-// page-articles.php
+// page-annonces.php
 
 // Empêche l'accès direct
 if (!defined('ABSPATH')) exit;

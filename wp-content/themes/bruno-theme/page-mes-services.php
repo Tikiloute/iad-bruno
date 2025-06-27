@@ -1,12 +1,10 @@
 <?php
-// page-conditons-generales.php
+// page-mes-services.php
 
 if (!defined('ABSPATH')) exit;
 
 get_header();
-
 ?>
-
 
 <?php require locate_template('views/bloc-haut.php'); ?>
 

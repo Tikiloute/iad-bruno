@@ -8,6 +8,8 @@ require_once get_template_directory() . '/constants.php';
 
 // 1. Charger les styles et scripts
 function bruno_theme_enqueue_scripts() {
+    error_log('Queried object ID: ' . get_queried_object_id());
+
     // Style principal WordPress (style.css)
     wp_enqueue_style('bruno-style', get_stylesheet_uri());
 
@@ -20,18 +22,24 @@ function bruno_theme_enqueue_scripts() {
         wp_enqueue_style('accueil-responsive', get_template_directory_uri() . '/assets/css/accueil-responsive.css');
     }
 
-    if (is_singular('post')) {
+    if (is_page(PAGE_ID_MENTIONS_LEGALES) || is_page(PAGE_ID_CONFIDENTIALITE) || is_page(PAGE_ID_SERVICES)) {
+    wp_enqueue_style('articles', get_template_directory_uri() . '/assets/css/articles.css');
+    wp_enqueue_style('post', get_template_directory_uri() . '/assets/css/post.css');
+    wp_enqueue_style('post-responsive', get_template_directory_uri() . '/assets/css/post-responsive.css');
+    }
+
+    if (is_singular(PAGE_ID_ARTICLES)) {
         wp_enqueue_style('post', get_template_directory_uri() . '/assets/css/post.css');
         wp_enqueue_style('post-responsive', get_template_directory_uri() . '/assets/css/post-responsive.css');
         wp_enqueue_style('articles', get_template_directory_uri() . '/assets/css/articles.css'); 
     }
 
-    if (is_page('mes-annonces')) {
+    if (is_page(PAGE_ID_ANNONCES)) {
         wp_enqueue_style('annonce', get_template_directory_uri() . '/assets/css/annonce.css');
         wp_enqueue_style('annonce-responsive', get_template_directory_uri() . '/assets/css/annonce-responsive.css');
     }
 
-    if (is_page('contact')) {
+    if (is_page(PAGE_ID_CONTACT)) {
         wp_enqueue_style('formulaire', get_template_directory_uri() . '/assets/css/formulaire.css');
         wp_enqueue_style('formulaire-responsive', get_template_directory_uri() . '/assets/css/formulaire-responsive.css');
         wp_enqueue_style('articles', get_template_directory_uri() . '/assets/css/articles.css');
@@ -39,9 +47,9 @@ function bruno_theme_enqueue_scripts() {
         wp_enqueue_style('post-responsive', get_template_directory_uri() . '/assets/css/post-responsive.css');
     }
 
-    if (is_page('articles') || is_page('annonces') || is_page(17)) {
+    if (is_page(PAGE_ID_ARTICLES) || is_page(PAGE_ID_ANNONCES)) {
         wp_enqueue_style('articles', get_template_directory_uri() . '/assets/css/articles.css');
-                wp_enqueue_style('annonce', get_template_directory_uri() . '/assets/css/annonce.css');
+        wp_enqueue_style('annonce', get_template_directory_uri() . '/assets/css/annonce.css');
     }
 
     

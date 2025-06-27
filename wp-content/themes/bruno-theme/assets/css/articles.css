@@ -146,6 +146,10 @@
   background-color: #dc3545; /* rouge vendu */
 }
 
+.badge-coupdecoeur {
+    background-color: #f78da7; /* rose tendre */
+}
+
 .badge-default {
   background-color: #6c757d; /* gris pour autres */
 }
